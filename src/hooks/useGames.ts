@@ -15,7 +15,12 @@ export type Game = {
   metacritic: number;
 };
 
-export const useGames = (selectedGenre: Genre | null) =>
-  useData<Game>("/games", { params: { genres: selectedGenre?.id } }, [
-    selectedGenre?.id,
-  ]);
+export const useGames = (
+  selectedGenre: Genre | null,
+  selectetPlatform: Platform | null
+) =>
+  useData<Game>(
+    "/games",
+    { params: { genres: selectedGenre?.id, platform: selectetPlatform?.id } },
+    [selectedGenre?.id, selectetPlatform?.id]
+  );
