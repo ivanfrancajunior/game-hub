@@ -4,7 +4,7 @@ import React from "react";
 const GameCardContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <Box
-      width={"300px"}
+      width={"100%"}
       overflow={"hidden"}
       borderRadius={8}
     >
