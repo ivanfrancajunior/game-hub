@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# GameHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GameHub é um aplicativo web de descoberta de videogames que ajuda você a encontrar jogos novos e interessantes para jogar. Com o GameHub, você pode pesquisar jogos por plataforma, gênero e muito mais.
 
-Currently, two official plugins are available:
+## Começando
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para começar com o GameHub, siga estes passos:
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone este repositório para sua máquina local.
 
-- Configure the top-level `parserOptions` property like this:
+2. Execute `npm install` para instalar as dependências necessárias.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Obtenha uma chave de API da RAWG em https://rawg.io/apidocs. Você precisará criar uma conta primeiro.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Adicione a chave da API ao **src/services/api-client.ts**
+
+5. Execute `npm run dev` para iniciar o servidor web.
+
+## Sobre o Curso
+
+ Este projeto é a primeira parte de uma série de duas partes, abrangendo os fundamentos.
+
+ Este projeto tem como objetivo o aprendizado de:
+
+- Como construir aplicativos front-end com React e TypeScript
+
+- Como construir componentes de função reutilizáveis
+
+- Como estilizar seus componentes usando Chakra UI
+
+- Como gerenciar o estado do componente
+
+- Como conectar seus aplicativos React ao backend
+
+- Escreva código limpo
+
+- Aplicar melhores práticas
+
+- Como publicar seus aplicativos React
