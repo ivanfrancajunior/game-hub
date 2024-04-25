@@ -11,9 +11,10 @@ import getCroppedImageUrl from "../services/getCroppedImageUrl";
 
 type Props = {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 };
 
-const GenresList = ({ onSelectGenre }: Props) => {
+const GenresList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   const colapseName = (name: string) => {
     if (name.length > 10) {
@@ -38,6 +39,8 @@ const GenresList = ({ onSelectGenre }: Props) => {
               borderRadius={"8px"}
             />
             <Button
+              textColor={genre.id === selectedGenre?.id ? "yellow.200" : "white"}
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               onClick={() => {
                 onSelectGenre(genre);
               }}
