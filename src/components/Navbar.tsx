@@ -1,5 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/gameshub-logo.svg";
+import logo from "../assets/images/logo.webp";
 import ColorMOdeSwitcher from "./ColorMOdeSwitcher";
 
 const Navbar = () => {
@@ -12,6 +12,7 @@ const Navbar = () => {
         src={logo}
         boxSize={"60px"}
       />
+
       <ColorMOdeSwitcher />
     </HStack>
   );
