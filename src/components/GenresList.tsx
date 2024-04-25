@@ -1,9 +1,29 @@
-import { HStack, Text, Image, List, ListItem } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
+import {
+  HStack,
+  Image,
+  List,
+  ListItem,
+  Spinner,
+  Button,
+} from "@chakra-ui/react";
+import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/getCroppedImageUrl";
 
-const GenresList = () => {
-  const { data } = useGenres();
+type Props = {
+  onSelectGenre: (genre: Genre) => void;
+};
+
+const GenresList = ({ onSelectGenre }: Props) => {
+  const { data, isLoading, error } = useGenres();
+  const colapseName = (name: string) => {
+    if (name.length > 10) {
+      return `${name.substring(0, 10)}...`;
+    }
+    return name;
+  };
+
+  if (isLoading) return <Spinner />;
+  if (error) return null;
   return (
     <List>
       {data.map((genre) => (
@@ -17,7 +37,15 @@ const GenresList = () => {
               boxSize={"32px"}
               borderRadius={"8px"}
             />
-            <Text fontSize={"lg"}>{genre.name}</Text>
+            <Button
+              onClick={() => {
+                onSelectGenre(genre);
+              }}
+              variant={"link"}
+              fontSize={"lg"}
+            >
+              {colapseName(genre.name)}
+            </Button>
           </HStack>
         </ListItem>
       ))}
@@ -26,3 +54,5 @@ const GenresList = () => {
 };
 
 export default GenresList;
+
+//TODO Add skeleton list
