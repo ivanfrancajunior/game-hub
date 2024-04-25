@@ -12,8 +12,8 @@ const Navbar = () => {
         src={logo}
         boxSize={"60px"}
       />
-      <ColorMOdeSwitcher />
       <Text>Navbar</Text>
+      <ColorMOdeSwitcher />
     </HStack>
   );
 };
