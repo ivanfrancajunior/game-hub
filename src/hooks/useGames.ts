@@ -9,9 +9,10 @@ type FetchResponse = {
   results: Game[];
 };
 
-type Game = {
+export type Game = {
   id: number;
   name: string;
+  background_image: string;
 };
 
 export const useGames = () => {
