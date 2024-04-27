@@ -2,9 +2,15 @@ import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
 import { AxiosRequestConfig, CanceledError } from "axios";
 
-type FetchResponse<T> = {
+export type FetchResponse<T> = {
   count: number;
   results: T[];
+};
+
+export type Genre = {
+  id: number;
+  name: string;
+  image_background: string;
 };
 
 export const useData = <T>(
