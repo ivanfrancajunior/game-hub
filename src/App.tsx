@@ -1,20 +1,12 @@
 import { useState } from "react";
 import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
-import { Genre } from "./hooks/useGenres";
-import { Platform } from "./hooks/useGames";
+import { GameQuery } from "./hooks/useGames";
 import Navbar from "./components/Navbar";
 import GamesGrid from "./components/GameGrid";
 import GenresList from "./components/GenresList";
 import PlataformSelector from "./components/PlataformSelector";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
-
-export type GameQuery = {
-  genre: Genre | null;
-  platform: Platform | null;
-  sortOrder: string;
-  searchText: string;
-};
 
 const App = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
