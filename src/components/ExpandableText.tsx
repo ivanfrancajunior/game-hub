@@ -19,7 +19,7 @@ const ExpandableText = ({ children }: Props) => {
     <>
       {isExpanded ? (
         <Text>
-          {sumary}...
+          {children}{" "}
           <Button
             size={"xs"}
             fontWeight={"bold"}
@@ -30,7 +30,7 @@ const ExpandableText = ({ children }: Props) => {
         </Text>
       ) : (
         <Text>
-          {children}{" "}
+          {sumary}...
           <Button
             size={"xs"}
             fontWeight={"bold"}
