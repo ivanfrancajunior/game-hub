@@ -1,40 +1,67 @@
-# GameHub
+<h1 align="center" style="font-weight: bold;">GameHub💻</h1>
 
-GameHub é um aplicativo web de descoberta de videogames que ajuda você a encontrar jogos novos e interessantes para jogar. Com o GameHub, você pode pesquisar jogos por plataforma, gênero e muito mais.
+<p align="center">
+ <a href="#technologies">Tecnologias</a> •
+ <a href="#started">Inicianto projeto</a> •
+</p>
 
-## Começando
+<p align="center">
+    <b>GameHub é um aplicativo web de descoberta de videogames que ajuda você a encontrar jogos novos e interessantes para jogar. Com o GameHub, você pode pesquisar jogos por plataforma, gênero e muito mais.</b>
+</p>
 
-Para começar com o GameHub, siga estes passos:
+<p align="center">
+     <a href="https://game-hub-project-mu.vercel.app/">📱 live</a>
+</p>
+
+<h2 id="layout">🎨 Layout</h2>
+
+<p align="center">
+    <img src="public/game-hub-project-mu.vercel.app_.png" alt="Image Example" width="400px">
+    <br/>
+    <img src="public/game-hub-project-mu.vercel.app_ mobile.png" alt="Image Example" width="400px">
+</p>
+
+<h2 id="technologies">💻 Tecnologias utilizadas:</h2>
+
+- React
+- React-Query
+- React-router-dom
+- Chakra UI
+- Zustand
+
+<h2 id="started">🚀 Iniciando projeto</h2>
+
+Rodando projeto localmente
+
+<h3>Pre-requisitos:</h3>
+
+- [NodeJS](https://github.com/)
+
+- [chave de API da RAWG]( https://rawg.io/apidocs)
+
+<h3>Clone</h3>
+
+Para clonar este projeto abra seu terminal e digite:
+
+```bash
+git clone https://github.com/ivanfrancajunior/game-hub.git
+```
+
+<h3>Rodando o projeto</h3>
+
+Após clonar basta seguir os seguintes comandos:
+
+```bash
+cd game-hub
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+Depois de instalado, adicione a chave da API ao `src/services/api-client.ts`
 
 
-1. Clone este repositório para sua máquina local.
-
-2. Execute `npm install` para instalar as dependências necessárias.
-
-3. Obtenha uma chave de API da RAWG em https://rawg.io/apidocs. Você precisará criar uma conta primeiro.
-
-4. Adicione a chave da API ao **src/services/api-client.ts**
-
-5. Execute `npm run dev` para iniciar o servidor web.
-
-## Sobre o Curso
-
- Este projeto é a primeira parte de uma série de duas partes, abrangendo os fundamentos.
-
- Este projeto tem como objetivo o aprendizado de:
-
-- Como construir aplicativos front-end com React e TypeScript
-
-- Como construir componentes de função reutilizáveis
-
-- Como estilizar seus componentes usando Chakra UI
-
-- Como gerenciar o estado do componente
-
-- Como conectar seus aplicativos React ao backend
-
-- Escreva código limpo
-
-- Aplicar melhores práticas
-
-- Como publicar seus aplicativos React
